@@ -4,6 +4,7 @@ from django.db import models
 class Customer(models.Model):
     customer_name = models.CharField(max_length=200)
     contract_start_date = models.DateField()
+    create_date = models.DateTimeField()
     #주문 고객사에 대한 속성을 확보하기
 
     def __str__(self):
@@ -12,6 +13,7 @@ class Customer(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=200)
+    create_date = models.DateTimeField()
     #제품 정보에 대한 속성을 확보하기
 
     def __str__(self):

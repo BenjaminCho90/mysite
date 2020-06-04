@@ -1,0 +1,9 @@
+{% if customer_list %}
+    <ul>
+    {% for customer in customer_list %}
+        <li><a href="/pybo/{{ customer.id }}/">{{ customer.customer_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>고객이 없습니다.</p>
+{% endif %}
